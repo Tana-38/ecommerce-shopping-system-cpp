@@ -1,0 +1,19 @@
+# Build outputs
+*.exe
+*.o
+*.obj
+*.out
+a.out
+build/
+bin/
+obj/
+
+# Editor/IDE
+.vscode/
+.vs/
+*.suo
+*.user
+
+# OS cruft
+Thumbs.db
+.DS_Store
