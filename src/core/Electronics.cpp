@@ -1,6 +1,8 @@
 #include "core/Electronics.h"
 #include <iostream>
 
+#include "util/StringUtil.h"
+
 namespace shop {
 
 Electronics::Electronics(int id, const std::string& name, double price, int stock, int warrantyMonths)
@@ -12,6 +14,22 @@ double Electronics::calculateDiscount() const {
 
 std::string Electronics::getCategory() const {
     return "Electronics";
+}
+
+std::string Electronics::discountRule() const {
+    return "10% off on all electronics";
+}
+
+std::string Electronics::attributeSummary() const {
+    return util::toStr(warrantyMonths) + "-month warranty";
+}
+
+std::vector<std::string> Electronics::attributeFields() const {
+    return {util::toStr(warrantyMonths)};
+}
+
+std::unique_ptr<Product> Electronics::clone() const {
+    return std::unique_ptr<Product>(new Electronics(*this));
 }
 
 void Electronics::display() const {

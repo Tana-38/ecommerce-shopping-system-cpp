@@ -15,6 +15,22 @@ std::string Grocery::getCategory() const {
     return "Grocery";
 }
 
+std::string Grocery::discountRule() const {
+    return price > 20.0 ? "Flat Rs 20 off" : "Flat Rs 20 off (capped at item price)";
+}
+
+std::string Grocery::attributeSummary() const {
+    return "Best before " + expiryDate;
+}
+
+std::vector<std::string> Grocery::attributeFields() const {
+    return {expiryDate};
+}
+
+std::unique_ptr<Product> Grocery::clone() const {
+    return std::unique_ptr<Product>(new Grocery(*this));
+}
+
 void Grocery::display() const {
     std::cout << "[" << getCategory() << "] #" << id << " " << name
                << " | Price: Rs " << price
