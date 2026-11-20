@@ -1,0 +1,5 @@
+id,name,email,phone,address,password_hash,wallet,joined
+1,Tanaya Thorat,tanaya@shop.com,9876543210,"Flat 12, Bibwewadi, Pune 411037",f33d47656d014ea2,2500.00,2026-08-14
+2,Viral Dhoka,viral@shop.com,9822012345,"Kothrud, Pune 411038",f33d47656d014ea2,1500.00,2026-08-20
+3,Shreenath Utekar,shreenath@shop.com,9763054321,"Upper Indiranagar, Pune 411037",f33d47656d014ea2,1000.00,2026-09-02
+4,Harshali Thakur,harshali@shop.com,9890123456,"Katraj, Pune 411046",f33d47656d014ea2,3000.00,2026-09-11
