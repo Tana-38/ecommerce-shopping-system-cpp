@@ -155,12 +155,19 @@ std::string header(const std::string& crumb, const std::string& right) {
 }
 
 std::string footer(const KeyHints& keys) {
-    std::string s = " ";
+    // Key hints flow onto a second line when they do not fit the page width.
+    std::string out = "\n  " + style::paint(util::repeat("─", kPageWidth), theme::kFaint) + "\n";
+    std::string line = " ";
     for (const auto& k : keys) {
-        s += style::badge(k.first, theme::kFaint, kWhite) + " " + style::paint(k.second, theme::kMuted) +
-             "   ";
+        std::string piece = style::badge(k.first, theme::kFaint, kWhite) + " " +
+                            style::paint(k.second, theme::kMuted) + "  ";
+        if (displayWidth(line) + displayWidth(piece) > kPageWidth && displayWidth(line) > 1) {
+            out += "  " + line + "\n";
+            line = " ";
+        }
+        line += piece;
     }
-    return "\n  " + style::paint(util::repeat("─", kPageWidth), theme::kFaint) + "\n  " + s + "\n";
+    return out + "  " + line + "\n";
 }
 
 void begin(const std::string& crumb, const std::string& right) {

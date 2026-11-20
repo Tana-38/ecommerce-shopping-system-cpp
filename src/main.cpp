@@ -79,9 +79,11 @@ int main(int argc, char** argv) {
     } catch (const ui::InputClosed&) {
         code = 0;
     } catch (const ShopException& e) {   // OOP: exception handling -- last line of defence
+        std::cout.flush();
         std::cerr << "\n" << e.title() << ": " << e.what() << "\n";
         code = 1;
     } catch (const std::exception& e) {
+        std::cout.flush();
         std::cerr << "\nUnexpected error: " << e.what() << "\n";
         code = 1;
     }

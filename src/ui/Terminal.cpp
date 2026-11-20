@@ -12,6 +12,8 @@
 #endif
 #include <windows.h>
 #include <conio.h>
+#include <fcntl.h>
+#include <io.h>
 #ifndef ENABLE_VIRTUAL_TERMINAL_PROCESSING
 #define ENABLE_VIRTUAL_TERMINAL_PROCESSING 0x0004
 #endif
@@ -65,6 +67,9 @@ void Terminal::init(bool wantColor, bool wantAnimation) {
         vt_ = SetConsoleMode(out, mode | ENABLE_VIRTUAL_TERMINAL_PROCESSING) != 0;
         g_originalCodePage = GetConsoleOutputCP();
         SetConsoleOutputCP(CP_UTF8);
+        // Binary mode stops the C runtime from splitting UTF-8 sequences while
+        // translating "\n" (the console still treats LF as a full newline).
+        _setmode(1, _O_BINARY);
     } else {
         // Not a console (pipe/file, or a mintty without winpty): trust TERM.
         vt_ = termLooksVt;
@@ -75,6 +80,10 @@ void Terminal::init(bool wantColor, bool wantAnimation) {
     vt_ = isatty(STDOUT_FILENO) && termLooksVt;
     interactive_ = isatty(STDIN_FILENO) && isatty(STDOUT_FILENO);
 #endif
+    // Fully buffer stdout: each frame leaves in one write. Every place that waits
+    // (key reads, line reads, sleeps) flushes first, so nothing is held back.
+    static char outBuffer[1 << 16];
+    std::setvbuf(stdout, outBuffer, _IOFBF, sizeof(outBuffer));
     color_ = wantColor && vt_ && std::getenv("NO_COLOR") == nullptr;
     // Animations only make sense when we can redraw in place.
     animation_ = wantAnimation && vt_;
