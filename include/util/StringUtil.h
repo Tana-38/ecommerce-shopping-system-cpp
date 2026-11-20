@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 
+// OOP: namespaces -- nested namespace shop::util for free helper functions.
 namespace shop {
 namespace util {
 

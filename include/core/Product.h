@@ -4,6 +4,8 @@
 #include <string>
 #include <vector>
 
+// OOP: namespaces -- every class in the project lives in namespace shop
+// (console UI in shop::ui, helpers in shop::util), so names never clash.
 namespace shop {
 
 // Abstraction: Product defines WHAT every sellable item must support,
