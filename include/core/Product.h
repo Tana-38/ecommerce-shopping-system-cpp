@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 
+namespace shop {
+
 // Abstraction: Product defines WHAT every sellable item must support,
 // without saying HOW discount/category work for any specific kind of product.
 class Product {
@@ -19,3 +21,5 @@ public:
     int getStock() const;
     bool reduceStock(int qty);                      // false if not enough stock
 };
+
+} // namespace shop

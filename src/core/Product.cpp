@@ -1,5 +1,7 @@
-#include "Product.h"
+#include "core/Product.h"
 #include <iostream>
+
+namespace shop {
 
 // Encapsulation: all data members live in the base class as protected,
 // reachable only through the constructor/getters defined here and in derived classes.
@@ -26,3 +28,5 @@ bool Product::reduceStock(int qty) {
     stock -= qty;
     return true;
 }
+
+} // namespace shop

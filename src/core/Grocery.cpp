@@ -1,6 +1,8 @@
-#include "Grocery.h"
+#include "core/Grocery.h"
 #include <algorithm>
 #include <iostream>
+
+namespace shop {
 
 Grocery::Grocery(int id, const std::string& name, double price, int stock, const std::string& expiryDate)
     : Product(id, name, price, stock), expiryDate(expiryDate) {}
@@ -23,3 +25,5 @@ void Grocery::display() const {
 }
 
 std::string Grocery::getExpiryDate() const { return expiryDate; }
+
+} // namespace shop

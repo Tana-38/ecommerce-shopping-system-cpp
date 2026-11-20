@@ -1,6 +1,8 @@
 #include <iostream>
-#include "Catalog.h"
-#include "Customer.h"
+#include "core/Catalog.h"
+#include "core/Customer.h"
+
+using namespace shop;
 
 static void printDivider(const std::string& title) {
     std::cout << "\n--- " << title << " ---\n";

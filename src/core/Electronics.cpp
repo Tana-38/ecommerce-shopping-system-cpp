@@ -1,5 +1,7 @@
-#include "Electronics.h"
+#include "core/Electronics.h"
 #include <iostream>
+
+namespace shop {
 
 Electronics::Electronics(int id, const std::string& name, double price, int stock, int warrantyMonths)
     : Product(id, name, price, stock), warrantyMonths(warrantyMonths) {}
@@ -22,3 +24,5 @@ void Electronics::display() const {
 }
 
 int Electronics::getWarrantyMonths() const { return warrantyMonths; }
+
+} // namespace shop

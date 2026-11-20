@@ -1,7 +1,9 @@
-#include "Customer.h"
+#include "core/Customer.h"
 #include <algorithm>
 #include <cctype>
 #include <iostream>
+
+namespace shop {
 
 Customer::Customer(int id, const std::string& name, const std::string& email,
                      const std::string& phone, const std::string& address)
@@ -46,3 +48,5 @@ bool Customer::isValidPhone(const std::string& phone) {
         return std::isdigit(c) != 0;
     });
 }
+
+} // namespace shop

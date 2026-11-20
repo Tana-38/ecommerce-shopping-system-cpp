@@ -1,5 +1,7 @@
-#include "Clothing.h"
+#include "core/Clothing.h"
 #include <iostream>
+
+namespace shop {
 
 Clothing::Clothing(int id, const std::string& name, double price, int stock, const std::string& size)
     : Product(id, name, price, stock), size(size) {}
@@ -22,3 +24,5 @@ void Clothing::display() const {
 }
 
 std::string Clothing::getSize() const { return size; }
+
+} // namespace shop

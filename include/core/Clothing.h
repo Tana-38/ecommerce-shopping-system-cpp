@@ -1,5 +1,7 @@
 #pragma once
-#include "Product.h"
+#include "core/Product.h"
+
+namespace shop {
 
 // Inheritance: Clothing IS-A Product, adding a size field.
 class Clothing : public Product {
@@ -15,3 +17,5 @@ public:
 
     std::string getSize() const;
 };
+
+} // namespace shop

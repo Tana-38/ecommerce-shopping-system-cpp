@@ -1,7 +1,9 @@
-#include "Catalog.h"
-#include "Electronics.h"
-#include "Clothing.h"
-#include "Grocery.h"
+#include "core/Catalog.h"
+#include "core/Electronics.h"
+#include "core/Clothing.h"
+#include "core/Grocery.h"
+
+namespace shop {
 
 std::vector<Product*> createSampleCatalog() {
     std::vector<Product*> catalog;
@@ -30,3 +32,5 @@ void freeCatalog(std::vector<Product*>& catalog) {
     }
     catalog.clear();
 }
+
+} // namespace shop

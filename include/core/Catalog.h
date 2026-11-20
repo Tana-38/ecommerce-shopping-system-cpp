@@ -1,6 +1,8 @@
 #pragma once
 #include <vector>
-#include "Product.h"
+#include "core/Product.h"
+
+namespace shop {
 
 // Returns a catalog of 9 heap-allocated products (3 per category), owned by
 // the caller. Each slot is a Product* (base pointer) even though the actual
@@ -11,3 +13,5 @@ std::vector<Product*> createSampleCatalog();
 // Deletes every product in the catalog. Because ~Product() is virtual,
 // `delete p` here correctly runs the derived class's destructor too.
 void freeCatalog(std::vector<Product*>& catalog);
+
+} // namespace shop

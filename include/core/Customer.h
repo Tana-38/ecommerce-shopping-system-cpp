@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 
+namespace shop {
+
 // Encapsulation: all fields are private; the only way in/out is through
 // getters and setters that validate input (email, phone) before accepting it.
 class Customer {
@@ -32,3 +34,5 @@ public:
     static bool isValidEmail(const std::string& email);
     static bool isValidPhone(const std::string& phone);
 };
+
+} // namespace shop

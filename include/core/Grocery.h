@@ -1,5 +1,7 @@
 #pragma once
-#include "Product.h"
+#include "core/Product.h"
+
+namespace shop {
 
 // Inheritance: Grocery IS-A Product, adding an expiryDate field.
 class Grocery : public Product {
@@ -15,3 +17,5 @@ public:
 
     std::string getExpiryDate() const;
 };
+
+} // namespace shop

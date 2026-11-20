@@ -1,5 +1,7 @@
 #pragma once
-#include "Product.h"
+#include "core/Product.h"
+
+namespace shop {
 
 // Inheritance: Electronics IS-A Product, adding a field (warrantyMonths)
 // that only makes sense for this category.
@@ -17,3 +19,5 @@ public:
 
     int getWarrantyMonths() const;
 };
+
+} // namespace shop
