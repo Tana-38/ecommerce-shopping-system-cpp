@@ -17,6 +17,7 @@ obj/
 # OS cruft
 Thumbs.db
 .DS_Store
+~$*
 
 # Generated invoices (keep the folder)
 invoices/*.txt
