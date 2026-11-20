@@ -46,7 +46,7 @@ std::vector<ProductPtr> products() {
         rated(new Grocery(20, "Amul Butter 500g", 285.0, 35, "2026-12-28"), 4.7),
         rated(new Grocery(21, "Aashirvaad Atta 10kg", 489.0, 40, "2027-02-10"), 4.5),
         rated(new Grocery(22, "Tata Tea Gold 500g", 310.0, 45, "2027-08-01"), 4.3),
-        rated(new Grocery(23, "Parle-G Biscuits 100g", 10.0, 200, "2027-01-15"), 4.6),
+        rated(new Grocery(23, "Parle-G Biscuits 250g", 25.0, 200, "2027-01-15"), 4.6),
     };
 }
 

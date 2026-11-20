@@ -17,5 +17,5 @@ order_id,product_id,name,category,unit_price,unit_discount,qty
 1007,8,Mi 20000mAh Power Bank,Electronics,1999.00,199.90,1
 1008,22,Tata Tea Gold 500g,Grocery,310.00,20.00,2
 1008,18,Fortune Sunflower Oil 1L,Grocery,155.00,20.00,2
-1008,23,Parle-G Biscuits 100g,Grocery,10.00,10.00,5
+1008,23,Parle-G Biscuits 250g,Grocery,25.00,20.00,5
 1008,10,Cotton Crew Neck T-Shirt,Clothing,499.00,24.95,2

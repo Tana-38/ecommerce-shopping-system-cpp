@@ -6,4 +6,4 @@ id,customer_id,customer_name,date,status,payment_method,payment_ref,coupon,addre
 1005,1,Tanaya Thorat,2026-11-12 13:05,Delivered,Card,CARD-480105,,"Flat 12, Bibwewadi, Pune 411037",6306.83
 1006,2,Viral Dhoka,2026-11-14 21:30,Cancelled,UPI,UPI-480106,,"Kothrud, Pune 411038",2834.06
 1007,3,Shreenath Utekar,2026-11-16 10:12,Shipped,UPI,UPI-480107,SAVE10,"Upper Indiranagar, Pune 411037",6202.70
-1008,4,Harshali Thakur,2026-11-18 18:45,Placed,Cash on Delivery,COD-480108,,"Katraj, Pune 411046",1888.01
+1008,4,Harshali Thakur,2026-11-18 18:45,Placed,Cash on Delivery,COD-480108,,"Katraj, Pune 411046",1914.26
